@@ -1,0 +1,20 @@
+
+
+
+	<label>
+		<div class="small-title">
+			{{ this.labelText }}
+		</div>
+		<input #typeaheadBasic="ngModel"
+				[(ngModel)]="this.currentValue"
+				(input)="onItemChanged($event.target.value)"
+				(selectItem)="onItemChanged($event.item)"
+				name="typeaheadBasic"
+				type="text"
+				class="form-control"
+				[minlength]="minLength"
+				[maxlength]="maxLength"
+				[required]="this.isRequired"
+				[ngbTypeahead]="this.search"/>	
+	</label>
+

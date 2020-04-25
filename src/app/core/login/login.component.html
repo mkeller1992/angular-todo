@@ -1,0 +1,55 @@
+
+<div style="height:40px"></div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4">
+
+			<h3>Login</h3>
+			<br>
+			<span *ngIf="errorMsg">
+				<p class="error-text">
+					{{ errorMsg }}
+				</p>
+				<div style="height: 10px;"></div>
+			</span>
+			<div>
+				<label>
+					Username:
+					<input [(ngModel)]="username"
+							class="form-control"
+							type="text" >
+				</label>
+			</div>
+			<div>
+				<label>
+					Password:
+					<input [(ngModel)]="password"
+							class="form-control"
+							type="password">
+				</label>
+			</div>
+
+			<div style="height:10px;"></div>
+
+			<button (click)="onLogin()" class="btn btn-sm btn-outline-dark">
+				Login
+			</button>
+
+			<span (click)="onRegister()" class="link register-link">
+				Registrieren
+			</span>
+
+			<div class="checkbox-line">
+				<label for="chbox">
+					<input [(ngModel)]="rememberMe"
+							[checked]="rememberMe"
+							id="chbox"
+							type="checkbox"
+							class="form-control"/>
+					Remember me
+				</label>
+			</div>
+		</div>
+	</div>
+</div>

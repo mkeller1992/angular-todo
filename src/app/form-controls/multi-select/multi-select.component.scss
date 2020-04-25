@@ -1,0 +1,29 @@
+
+@import "../../../styles.scss";
+
+.multiselect-dropdown {
+	font-size: 0.8rem !important;
+	.item2 {
+		max-height: 100px !important;
+	}
+}
+
+.multiselect-dropdown .dropdown-btn .selected-item {
+	border: 1px solid $default-blue !important;
+	color: $default-blue !important;
+	background: rgba(0, 0, 0, 0.03) !important;
+	margin: 2px 4px 2px 0px;
+}
+
+.multiselect-dropdown .dropdown-btn .selected-item a[style] {
+	color: $default-blue !important;
+}
+
+.multiselect-item-checkbox input[type=checkbox]:checked + div:before {
+	background: $default-blue !important;
+}
+
+.multiselect-item-checkbox input[type=checkbox] + div:before {
+	color: $default-blue !important;
+	border: 2px solid $default-blue !important;
+}

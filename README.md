@@ -1,2 +1,2 @@
-# angular-todo
-Simple todo-app as part of a school-project
+# todoApp
+An Angular school-project for the course "Javascript" ;-)

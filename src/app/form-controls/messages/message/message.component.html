@@ -1,0 +1,6 @@
+
+<div class="msg-{{ message.type }}" [@state]='message.state' (@state.done)='onDismissalCompleted()'>
+    <app-dismiss-button *ngIf="message.dismissable" (click)="setDimissalStart()"></app-dismiss-button>
+    {{ message.text }}
+</div>
+

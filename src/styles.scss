@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+
+body {
+    padding-top: 5.5rem;
+	font-family: "Comic Sans MS", cursive, sans-serif !important;
+	overflow-y: scroll;
+}
+
+$default-blue: #536dfe;
+$light-gray: rgba(0, 0, 0, 0.45);
+
+.link {
+	cursor: pointer;
+	color: $default-blue;
+	text-decoration: underline;
+}
+
+.link:hover {
+	color: black;
+	text-decoration: underline;
+}
+
+.error-text {
+	color: red;
+}
+
+input.ng-invalid.ng-touched {
+	border: 2px solid red;
+}
+
+/** The following lines prevent modal from distorting the layout **/
+
+.modal-open {
+	.navbar {
+		padding-left: 0px;
+		margin-left: -1px;
+	}
+	.main-content {
+		margin-left: -1px;
+	}
+	.modal {
+		overflow-y: scroll;
+	}
+}
+
+/* Override default-color of bootstrap-buttons */
+
+::ng-deep .btn-outline-primary {
+    color: $default-blue;
+    border-color: $default-blue;
+}
+
+::ng-deep .btn-outline-primary:hover {
+	background-color: $default-blue;
+	border-color: $default-blue;
+}

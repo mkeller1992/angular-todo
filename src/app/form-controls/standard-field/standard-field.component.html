@@ -1,0 +1,15 @@
+
+	<label>
+		<div class="small-title">
+			{{ this.labelText }}
+		</div>
+		<input #standardInputField="ngModel"
+				[(ngModel)]="this.currentValue"
+				(input)="onItemChanged($event.target.value)"
+				name="standardInputField"
+				class="form-control"
+				[type]="this.inputType"
+				[minlength]="minLength"
+				[maxlength]="maxLength"
+				[required]="this.isRequired">
+	</label>

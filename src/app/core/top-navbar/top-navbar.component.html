@@ -1,0 +1,60 @@
+
+<!-- Source: https://embed.plnkr.co/plunk/xH6VJo -->
+
+<nav class="navbar navbar-expand-md navbar-dark bg-primary fixed-top">
+	<div class="container">
+
+		<span class="app-logo-name">
+			<a class="navbar-item">
+				<img class="app-logo" src="../../../assets/logo.png">
+			 </a>
+			<span class="navbar-brand">| {{ appName }} |
+			</span>
+		</span>
+		
+		<button class="navbar-toggler hidden-sm-up"
+				type="button" (click)="isNavbarCollapsed = !isNavbarCollapsed"
+				data-target="#navbarsDefault"
+				aria-controls="navbarsDefault"
+				aria-expanded="false"
+				aria-label="Toggle navigation">
+
+		<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div [ngbCollapse]="isNavbarCollapsed" class="collapse navbar-collapse" id="navbarsDefault">
+			<ul class="navbar-nav mr-auto" *ngIf="isUserLoggedIn">
+				<li class="nav-item">
+					<a routerLink="/" class="nav-link">
+						<i class="fas fa-calendar-alt"></i>
+							Calendar
+					</a>
+				</li>
+				<li class="nav-item">
+					<a routerLink="/todo-list" class="nav-link">
+						<i class="fas fa-clipboard-list"></i>
+							Todo-List
+					</a>
+				</li>
+				<li class="nav-item" *ngIf="isNavbarCollapsed === false">					
+					<a routerLink="/logout" class="nav-link">
+						<i class="fas fa-sign-out-alt"></i>
+							Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+
+		<div class="d-none d-md-block">
+			<ul class="navbar-nav" *ngIf="isUserLoggedIn">
+				<li class="nav-item">					
+					<a routerLink="/logout" class="nav-link">
+						<i class="fas fa-sign-out-alt"></i>
+							Logout
+					</a>
+				</li>
+			</ul>
+		</div>
+
+	</div>
+  </nav>

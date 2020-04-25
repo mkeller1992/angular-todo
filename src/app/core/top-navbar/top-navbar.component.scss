@@ -1,0 +1,34 @@
+@import "../../../styles.scss";
+
+.app-logo-name {
+	margin-right: 30px;
+}
+
+.app-logo {
+	margin-left: 5px;
+	margin-top: -5px;
+	height: 1.6rem;
+	margin-right: 15px;
+}
+
+.nav-item {
+	cursor: pointer;
+	margin-left: 10px;
+}
+
+.navbar-dark .navbar-nav .nav-link { 
+	display: inline-block;
+	color: rgba(255,255,255,.8);
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+	color: white;
+}
+
+.navbar.bg-primary {
+    background-color: $default-blue !important;
+}
+
+.nav-link {
+	padding: unset;
+}

@@ -1,0 +1,101 @@
+
+<div class="container" *ngIf="isLoading">
+	<div class="row">
+		Loading Todos...
+	</div>
+</div>
+
+<div class="container" *ngIf="isLoading === false">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="calendar-area">				
+				<ngb-datepicker *ngIf="isCalenderCollapsed === false"
+								#dp [(ngModel)]="model" 
+									(dateSelect)="onSelectDateInCalendar($event)">
+				</ngb-datepicker>
+
+				<div *ngIf="isCalenderCollapsed === false"
+						(click)="isCalenderCollapsed = true"		
+						class="calender-toggle">					
+					<i class="fas fa-lg fa-chevron-circle-up"></i>
+				</div>
+
+				<button  *ngIf="isCalenderCollapsed === true"
+							(click)="onShowCalender()"
+							type="text"
+							class="btn btn-sm btn-outline-primary">
+						Select Date &nbsp;
+					<i class="fas fa-calendar-alt"></i>
+				</button>
+				&nbsp;
+				<button  *ngIf="isCalenderCollapsed === true"
+							(click)="this.onCreateTodo(null)"
+							type="text"
+							class="btn btn-sm btn-outline-primary">
+							Add Todo
+					<i class="fas fa-plus"></i>
+				</button>
+				<div *ngIf="isCalenderCollapsed" style="height:10px;"></div>
+
+			</div>		
+		</div>
+
+		<div class="col-md-8">
+			<span>
+				<app-multi-select *ngIf="allCategories"
+									[allCategories]="allCategories"
+									[(selectedCategories)]="selectedCategories"
+									(selectedCategoriesChange)="onCategorySelectionChange()">
+				</app-multi-select>
+			</span>
+			<div style="height:20px;"></div>	
+		</div>
+	</div>
+
+	<div style="height: 20px;"></div>
+
+	<div class="row">
+		<div class="col-md-12">
+			<div *ngIf="daysOfSelectedWeek" class="days-of-week">
+				<div *ngFor="let d of daysOfSelectedWeek" class="table-col {{ isDaySelected(d) ? 'selected' : '' }}">
+
+					<hr class="horizontal-line"/>
+
+					<div class="date-header">
+						{{ d.dateAsStr }}				
+						<span (click)="onCreateTodo(d)" class="add-icon">
+							<i class="fas fa-plus"></i>
+						</span>					
+
+					</div>
+
+					<div class="day-header">
+						{{ d.weekDay }}
+					</div>
+					
+					<div *ngFor="let t of d.todoList" > 
+						<div class="todo-item"
+							[ngClass]="{ 'important': this.t.important, 'completed': this.t.completed}"
+							(click)="onEditTodo(t)">
+							<div class="todo-title">
+								{{ t.title }}
+							</div>						
+							<div class="todo-text">
+								<div>
+									Cat: {{ t.category }}
+								</div>
+								<div>
+									Important: {{ t.important ? 'Yes' : 'No' }}
+								</div>
+								<div>
+									Completed: {{ t.completed ? 'Yes' : 'No' }}
+								</div>													
+							</div>
+						</div>
+						<hr>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

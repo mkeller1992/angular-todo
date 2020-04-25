@@ -1,0 +1,123 @@
+
+@import "../../../../styles.scss";
+
+
+/*** Calender Area ***/
+
+.calendar-area {
+	padding-top: 5px;
+	white-space: nowrap;
+}
+
+.calender-toggle {
+	vertical-align: top;
+	margin-left: 10px;
+	color: $default-blue;
+	display: inline-block;
+	cursor: pointer;
+}
+
+::ng-deep .btn-light.bg-primary.text-white {
+	background-color: $default-blue !important;
+}
+
+::ng-deep .btn.btn-link.ngb-dp-arrow-btn {
+	color: $default-blue !important;
+}
+
+
+/*** Todo Columns ***/
+
+.horizontal-line {
+	margin-top: 0px;
+	margin-bottom:0px;
+	border-top: 1.5px solid rgba(0,0,0,.1);
+}
+
+.days-of-week {
+	 display: flex;
+	 justify-content: space-between;
+}
+
+.table-col {
+	width: 160px;
+	border: 1px solid transparent;
+}
+
+.table-col.selected {
+	background-color: #007bff18;
+	border: 1px solid blue;
+}
+
+.todo-item {
+	margin-left: 2px;
+	margin-right: 2px;
+	padding: 3px 5px 3px 3px;
+	border: 1px solid transparent;
+}
+
+.todo-item:hover {
+	background-color: #007bff18;
+	border: 1px solid blue;
+	cursor: pointer;
+}
+
+.date-header {
+	white-space: nowrap;
+	color:rgba(0, 0, 0, 0.7);
+	padding: 8px 5px 0px 7px; 
+	font-size: 0.8rem;
+	font-weight: 600;
+}
+
+.day-header {
+	white-space: nowrap;
+	margin: 8px -1px 15px -1px;
+	padding: 5px 5px 7px 7px;
+	font-size: 0.9rem;
+	font-weight: 600;
+	color:rgba(0, 0, 0, 0.7);
+	background-color: rgba(128, 128, 128, 0.2);
+}
+
+.todo-title {
+	color: $default-blue;
+	font-size: 0.9rem;
+	font-weight: 600;
+}
+
+.todo-item.important > .todo-title {
+	color: red;
+}
+
+.todo-item.completed,
+.todo-item.completed > .todo-title,
+.todo-item.completed > .todo-title:hover {
+	color: $light-gray;
+	background-color: unset;
+	cursor: default;
+}
+
+.todo-item.completed:hover {
+	border: 1px solid $light-gray;
+}
+
+.todo-text {
+	font-size: 0.7rem;
+}
+
+/*** Add-Icon ***/
+
+.add-icon {
+	color: $default-blue;
+}
+
+.add-icon:hover {
+	cursor: pointer;
+	background-color: #007bff70;
+}
+
+.fa-plus {
+	margin-left: 5px;
+	margin-right: 5px;
+}

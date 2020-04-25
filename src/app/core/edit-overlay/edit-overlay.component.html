@@ -1,0 +1,90 @@
+
+
+<div class="modal-header">
+	<h4 class="modal-title">{{ isNew ? 'Create Todo' : 'Edit Todo' }}</h4>
+	<button type="button" class="close" aria-label="Close" (click)="onCancel()">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+  </div>
+
+  <form #oneFieldDropdownForm="ngForm">
+  <div class="modal-body">
+
+	<app-standard-field
+		#uiElement
+		[labelText]="'Title'"
+		[inputType]="'text'"
+		[minLength]="2"
+		[maxLength]="50"
+		[isRequired]="true"
+		[(currentValue)]="currentTodo.title">
+	</app-standard-field>
+
+	<app-autocomplete
+		#uiElement
+		[items]="categories"
+		[labelText]="'Categories'"
+		[minLength]="2"
+		[maxLength]="50"
+		[isRequired]="true"
+		[(currentValue)]="currentTodo.category">
+	</app-autocomplete>
+
+	<app-standard-field
+		#uiElement
+		[labelText]="'Due Date'"
+		[inputType]="'date'"
+		[isRequired]="true"
+		[(currentValue)]="currentTodo.dueDate">
+	</app-standard-field>
+
+	<app-standard-field *ngIf="isNew && isRecurring"
+		#uiElement
+		[labelText]="'Recurring until'"
+		[inputType]="'date'"
+		[isRequired]="true"
+		[(currentValue)]="recurringUntil">
+	</app-standard-field>
+
+
+	<div style="height:10px;"></div>
+
+	<label *ngIf="isNew">
+		<input class="chbox"
+					type="checkbox"
+					[checked]="isRecurring"
+					(change)="isRecurring = !isRecurring"/>
+					Weekly recurring
+	</label>
+
+
+
+	<label>
+		<input class="chbox"
+					type="checkbox"
+					[checked]="currentTodo.important"
+					(change)="currentTodo.important = !currentTodo.important"/>
+					Important
+	</label>
+
+	<label *ngIf="isNew === false">
+		<input class="chbox"
+					type="checkbox"
+					[checked]="currentTodo.completed"
+					(change)="currentTodo.completed = !currentTodo.completed"/>
+					Completed
+	</label>
+
+  </div>
+
+  <div class="modal-footer">
+	<div class="delete-btn">
+		<button *ngIf="isNew === false" style="float:left" type="button" class="btn btn-outline-danger" (click)="onRequestDelete()">Delete</button>
+	</div>
+	<div class="save-cancel-btn">
+		<button type="button" class="btn btn-outline-dark" (click)="onCancel()">Cancel</button>
+		&nbsp;
+		<button type="submit" class="btn btn-outline-primary" (click)="onSave()">Save</button>
+	</div>
+  </div>
+</form>

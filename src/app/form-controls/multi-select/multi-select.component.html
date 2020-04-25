@@ -1,0 +1,14 @@
+
+
+<span *ngIf="this.allCategories && this.allCategories.length > 0">
+	<ng-multiselect-dropdown
+	[placeholder]="'Select a category'"
+	[data]="allCategories"
+	[(ngModel)]="selectedCategories"
+	[settings]="dropdownSettings"
+	(onSelect)="onItemSelect($event)"
+	(onSelectAll)="onSelectAll($event)"
+	(onDeSelect)="onItemUnselect($event)"
+	(onDeSelectAll)="onUnselectAll($event)">
+	</ng-multiselect-dropdown>
+</span>
