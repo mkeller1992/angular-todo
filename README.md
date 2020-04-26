@@ -41,11 +41,11 @@ Enthält die Definitionen der Model-Klassen.
 
 **Services**
 Beinhaltet «zentrale Dienste» (häufig Singletons), welche potenziell in jede andere Component injected und dort dann genutzt werden können.
-•	**Base.service:** Wird in andere Services injected und enthält grundlegende Variablen-Definitionen und Properties wie z.B. das User-Objekt.
-•	**Auth.service:** Bildet beim Login und bei der Registrierung eines neuen Users die Schnittstelle zum Web-Api.
-•	**Auth-guard.service:** Prüft beim Aufruf einer App-URL, ob der User authentisiert ist und leitet ihn im negativen Fall auf die Login-Seite weiter.
-•	**Message.service:** Ermöglicht die Anzeige von Dialog-Messages sowie von Success und Error-Notifications.
-•	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
+-	**Base.service:** Wird in andere Services injected und enthält grundlegende Variablen-Definitionen und Properties wie z.B. das User-Objekt.
+-	**Auth.service:** Bildet beim Login und bei der Registrierung eines neuen Users die Schnittstelle zum Web-Api.
+-	**Auth-guard.service:** Prüft beim Aufruf einer App-URL, ob der User authentisiert ist und leitet ihn im negativen Fall auf die Login-Seite weiter.
+-	**Message.service:** Ermöglicht die Anzeige von Dialog-Messages sowie von Success und Error-Notifications.
+-	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
 
 ## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##
 
