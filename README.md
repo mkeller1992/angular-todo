@@ -1,8 +1,8 @@
-# Dokumentation zur Todo App von Simon Hermann und Matthias Keller
+# Dokumentation zur Todo App von Simon Herrmann und Matthias Keller
 
 ## Anleitung zur Benutzung der Applikation
 
-[**URL der Demo-Applikation:**] (http://147.87.116.6:5037/) (die App ist auf einem Server im Rolex-Gebäude in Biel gehostet).
+**URL der Demo-Applikation:** http://147.87.116.6:5037/ (die App ist auf einem Server im Rolex-Gebäude in Biel gehostet).
 
 Auf dem Startbildschirm können Sie unten rechts auf **«Registrieren»** klicken, falls Sie ein neues Login erstellen möchten. **Nach dem erfolgreichen Einloggen** stehen Ihnen folgende Möglichkeiten offen:
 
@@ -22,16 +22,16 @@ Todo-Kategorien ein-/ausblenden: Oben rechts befindet sich ein Multi-Select, wo 
 
 **App-Folder**
 Das App-Folder umfasst u.a. folgende grundlegende Applikations-Bestandteile:
-•	**App-Component:** Bildet (innerhalb der index.html) sozusagen den «Rahmen» der Single-Page-Applikation.
-•	**App-Module:** Hier müssen sich beim Aufstarten der App alle Components registrieren.
-•	**App-Routing.Module:** Umfasst das Mapping der App-URLs auf die Components.
+-	**App-Component:** Bildet (innerhalb der index.html) sozusagen den «Rahmen» der Single-Page-Applikation.
+-	**App-Module:** Hier müssen sich beim Aufstarten der App alle Components registrieren.
+-	**App-Routing.Module:** Umfasst das Mapping der App-URLs auf die Components.
 
 Das App-Folder enthält zudem nachfolgende Sub-Folders:
 
 **Core**
 Das Herzstück der Applikation. Es umfasst jene Components, welche (Partial-)Views mit einem spezifischen Inhalt repräsentieren wie z.B. die Login-Component, die Calendar-View oder die Top-Navbar (im Gegensatz zu den generischen form-control Components).
-•	core/views/***calendar-view:*** Enthält die eigentliche Main-View
-•	core/***edit-overlay:*** Enthält das Popup, in dem ein Todo erstellt/editiert oder gelöscht werden kann.
+- core/views/***calendar-view:*** Enthält die eigentliche Main-View
+-	core/***edit-overlay:*** Enthält das Popup, in dem ein Todo erstellt/editiert oder gelöscht werden kann.
 
 **Form-controls**
 Enthält Components, welche wiederverwendbare Form-Elements darstellen, wie z.B. ein Input-Field oder ein Multi-Select.
