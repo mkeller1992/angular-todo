@@ -16,7 +16,7 @@ Auf dem Startbildschirm können Sie unten rechts auf **«Registrieren»** klicke
 
 **Kategorien erstellen/ entfernen:** Sobald beim Erstellen oder Editieren eine Category angegeben wird, die zuvor noch nicht vorhanden war, wird automatisch eine neue Todo-Kategorie angelegt. Wenn das letzte Todo-Item einer Kategorie gelöscht wird, bewirkt dies gleichzeitig die (vorläufige) Entfernung der entsprechenden Kategorie.
 
-**Logout:** Der Logout-Button befindet sich oben rechts in der Top-Navbar. Es kann vorkommen, dass während der Verwendung der Applikation der Bearer-Token seine Gültigkeit verliert. In diesem Falle wird der User automatisch ausgeloggt und auf den Login-Screen weitergeleitet.
+**Logout:** Der Logout-Button befindet sich oben rechts in der Top-Navbar. Es kann vorkommen, dass während der Verwendung der Applikation der Bearer-Token seine Gültigkeit verliert. In diesem Falle wird der User automatisch ausgeloggt und auf den Login-Screen weitergeleitet.  
   
 
 ## Die wichtigsten Bestandteile der Applikation im Überblick ##
@@ -49,7 +49,7 @@ Beinhaltet «zentrale Dienste» (häufig Singletons), welche potenziell in jede 
 -	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
   
 
-## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##
+## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##  
 
 **Programmiersprache**  
 Der wohl offensichtlichste Unterschied zur VanillaJS-App beruht darin, dass beim Arbeiten mit dem Angular-Framework nicht Javascript-Funktionen, sondern Typescript-Methoden implementiert werden. Gerade für C-Sharp und Java-Entwickler fühlt sich Typescript sofort sehr vertraut an.
