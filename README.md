@@ -11,7 +11,8 @@ Auf dem Startbildschirm können Sie unten rechts auf **«Registrieren»** klicke
 **Hinzufügen eines Todos:** Ein neues Todo erstellen können Sie einerseits via «Add Todo»-Button oben links (nur bei zugeklapptem Kalender) oder durch Klick auf das blaue Plus-Symbol neben dem gewünschten Datum in der Wochenübersicht. In der anschliessend erscheinenden Inputmaske ist das Feld «Categories» als Autocomplete implementiert. Beachten Sie zudem die Möglichkeit wöchentlich wiederkehrende Tasks zu definieren, indem Sie die Checkbox «Weekly recurring» selektieren.
 
 **Bestehende Tasks ändern, löschen oder abschliessen:** Klicken Sie dazu auf den gewünschten Eintrag in der Todo-Tabelle. Achtung: Einmal abgeschlossene Tasks können nicht mehr editiert werden.
-Todo-Kategorien ein-/ausblenden: Oben rechts befindet sich ein Multi-Select, wo Sie Todos bestimmter Kategorien via Klick auf das entsprechende x-Symbol ausblenden können. Im Weiteren sehen Sie rechts innerhalb des Multi-Select einen nach unten gerichteten grauen Pfeil, der Sie zu einer Auswahl mit sämtlichen verfügbaren Kategorien führt.
+
+**Todo-Kategorien ein-/ausblenden:** Oben rechts befindet sich ein Multi-Select, wo Sie Todos bestimmter Kategorien via Klick auf das entsprechende x-Symbol ausblenden können. Im Weiteren sehen Sie rechts innerhalb des Multi-Select einen nach unten gerichteten grauen Pfeil, der Sie zu einer Auswahl mit sämtlichen verfügbaren Kategorien führt.
 
 **Kategorien erstellen/ entfernen:** Sobald beim Erstellen oder Editieren eine Category angegeben wird, die zuvor noch nicht vorhanden war, wird automatisch eine neue Todo-Kategorie angelegt. Wenn das letzte Todo-Item einer Kategorie gelöscht wird, bewirkt dies gleichzeitig die (vorläufige) Entfernung der entsprechenden Kategorie.
 
@@ -46,6 +47,7 @@ Beinhaltet «zentrale Dienste» (häufig Singletons), welche potenziell in jede 
 -	**Auth-guard.service:** Prüft beim Aufruf einer App-URL, ob der User authentisiert ist und leitet ihn im negativen Fall auf die Login-Seite weiter.
 -	**Message.service:** Ermöglicht die Anzeige von Dialog-Messages sowie von Success und Error-Notifications.
 -	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
+
 
 ## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##
 
