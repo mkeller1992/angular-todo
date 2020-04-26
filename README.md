@@ -17,7 +17,7 @@ Auf dem Startbildschirm können Sie unten rechts auf **«Registrieren»** klicke
 **Kategorien erstellen/ entfernen:** Sobald beim Erstellen oder Editieren eine Category angegeben wird, die zuvor noch nicht vorhanden war, wird automatisch eine neue Todo-Kategorie angelegt. Wenn das letzte Todo-Item einer Kategorie gelöscht wird, bewirkt dies gleichzeitig die (vorläufige) Entfernung der entsprechenden Kategorie.
 
 **Logout:** Der Logout-Button befindet sich oben rechts in der Top-Navbar. Es kann vorkommen, dass während der Verwendung der Applikation der Bearer-Token seine Gültigkeit verliert. In diesem Falle wird der User automatisch ausgeloggt und auf den Login-Screen weitergeleitet.
-
+  
 
 ## Die wichtigsten Bestandteile der Applikation im Überblick ##
 
@@ -26,7 +26,7 @@ Das App-Folder umfasst u.a. folgende grundlegende Applikations-Bestandteile:
 -	**App-Component:** Bildet (innerhalb der index.html) sozusagen den «Rahmen» der Single-Page-Applikation.
 -	**App-Module:** Hier müssen sich beim Aufstarten der App alle Components registrieren.
 -	**App-Routing.Module:** Umfasst das Mapping der App-URLs auf die Components.
-
+  
 Das App-Folder enthält zudem nachfolgende Sub-Folders:
 
 **Core**  
@@ -47,7 +47,7 @@ Beinhaltet «zentrale Dienste» (häufig Singletons), welche potenziell in jede 
 -	**Auth-guard.service:** Prüft beim Aufruf einer App-URL, ob der User authentisiert ist und leitet ihn im negativen Fall auf die Login-Seite weiter.
 -	**Message.service:** Ermöglicht die Anzeige von Dialog-Messages sowie von Success und Error-Notifications.
 -	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
-
+  
 
 ## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##
 
