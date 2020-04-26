@@ -17,7 +17,7 @@ Auf dem Startbildschirm können Sie unten rechts auf **«Registrieren»** klicke
 **Kategorien erstellen/ entfernen:** Sobald beim Erstellen oder Editieren eine Category angegeben wird, die zuvor noch nicht vorhanden war, wird automatisch eine neue Todo-Kategorie angelegt. Wenn das letzte Todo-Item einer Kategorie gelöscht wird, bewirkt dies gleichzeitig die (vorläufige) Entfernung der entsprechenden Kategorie.
 
 **Logout:** Der Logout-Button befindet sich oben rechts in der Top-Navbar. Es kann vorkommen, dass während der Verwendung der Applikation der Bearer-Token seine Gültigkeit verliert. In diesem Falle wird der User automatisch ausgeloggt und auf den Login-Screen weitergeleitet.  
-  
+<br/>
 
 ## Die wichtigsten Bestandteile der Applikation im Überblick ##  
 
@@ -47,8 +47,7 @@ Beinhaltet «zentrale Dienste» (häufig Singletons), welche potenziell in jede 
 -	**Auth-guard.service:** Prüft beim Aufruf einer App-URL, ob der User authentisiert ist und leitet ihn im negativen Fall auf die Login-Seite weiter.
 -	**Message.service:** Ermöglicht die Anzeige von Dialog-Messages sowie von Success und Error-Notifications.
 -	**Todo.Services:** Bildet für das Abrufen, Erstellen, Updaten und Löschen von Todos die Schnittstelle zum Web-Api. Fungiert zudem als eine Art Zwischenspeicher (Data-Store) für die komplette Todo-Liste sowie für die Listen mit den Todo-Kategorien.
-  
-
+<br/>
 ## Parallelen / Unterschiede zwischen VanillaJS Applikation und unserer Angular-App ##   
 
 **Programmiersprache**  
