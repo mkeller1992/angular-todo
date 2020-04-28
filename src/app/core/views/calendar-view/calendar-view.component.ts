@@ -119,17 +119,21 @@ export class CalendarViewComponent implements OnInit, OnDestroy {
 	}
 
 	onCreateTodo(selectedDay: Day) {
+		// If user clicked plain 'add-todo'-button (which is unreleated to any date)
 		if (!selectedDay) {
 			this.selectedTodo = new Todo();
 			this.startEditingMode(true, this.selectedTodo);
 		}
-		// Mark date in calendar which corresponds to the date next to the selected add-button
-		this.markDateInCalendar(this.h.getDateAsUSString(selectedDay.date));
-		// Mark in the todo-table:
-		this.selectedDate = selectedDay.date;
-		// Start editing-mode:
-		this.selectedTodo = new Todo(null, null, this.h.getDateAsUSString(selectedDay.date));
-		this.startEditingMode(true, this.selectedTodo);
+		// If user clicked plus-symbol (which corresponds to a particular date)
+		else {
+			// Mark date in calendar which corresponds to the date next to the selected add-button
+			this.markDateInCalendar(this.h.getDateAsUSString(selectedDay.date));
+			// Mark in the todo-table:
+			this.selectedDate = selectedDay.date;
+			// Start editing-mode:
+			this.selectedTodo = new Todo(null, null, this.h.getDateAsUSString(selectedDay.date));
+			this.startEditingMode(true, this.selectedTodo);
+		}
 	}
 
 	onEditTodo(selectedTodo: Todo) {
