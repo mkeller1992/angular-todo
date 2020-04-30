@@ -52,15 +52,8 @@ export class AuthService {
 					this.user = loggedInUser;
 					this.router.navigate(['']);
 				}
-
-				const userInLocalStorage = localStorage.getItem(this.baseSvc.USER_STORAGE_KEY);
-
-				if (userInLocalStorage == null && userInLocalStorage == null) {
-					return;
-				}
 			}
 		});
-
 	}
 
 
